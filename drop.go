@@ -7,8 +7,8 @@ import (
 	"github.com/sid77/drop/syscall"
 )
 
-func DropPrivileges(newUser string) (err error) {
-	usr, err := user.Lookup(newUser)
+func DropPrivileges(runAsUser string) (err error) {
+	usr, err := user.Lookup(runAsUser)
 	if err != nil {
 		return err
 	}
